@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
   private
     def comment_params
-      params.require(:comment).permit(:commenter, :body)
+      # This change is missing from v6.1.0
+      params.require(:comment).permit(:commenter, :body, :status)
     end
 end

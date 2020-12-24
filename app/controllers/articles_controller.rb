@@ -44,6 +44,7 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :body)
+      # This change is missing from v6.1.0
+      params.require(:article).permit(:title, :body, :status)
     end
 end

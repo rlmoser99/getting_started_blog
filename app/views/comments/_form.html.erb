@@ -7,6 +7,11 @@
     <%= form.label :body %><br>
     <%= form.text_area :body %>
   </p>
+  <%# This change is missing from v6.1.0 %>
+  <p>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </p>
   <p>
     <%= form.submit %>
   </p>
